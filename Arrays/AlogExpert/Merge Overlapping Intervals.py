@@ -14,6 +14,7 @@ def mergeOverlappingIntervals(intervals):
         else:
             currentInterval = interval
             output.append(currentInterval)
+
     return output
 
 
