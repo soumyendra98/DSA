@@ -11,4 +11,3 @@ def lengthOfLIS(nums: List[int]) -> int:
                 lis[i] = lis[j] + 1
 
     return max(lis)
-
