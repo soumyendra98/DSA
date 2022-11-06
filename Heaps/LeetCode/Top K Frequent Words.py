@@ -24,3 +24,16 @@ def topKFrequent(words: List[str], k: int) -> List[str]:
         p_q.push(count, word)
 
     return [p_q.pop()[1] for key in range(k)]
+
+
+# Using Sorted and heap
+# def topKFrequent(self, words: List[str], k: int) -> List[str]:
+#     word_map = Counter(words)
+#     # sorted_words = sorted(word_map.items(), key=lambda x: (-x[1], x[0]))
+#     # return [val for val, _ in sorted_words[:k]]
+#     max_heap = []
+#
+#     for key, val in word_map.items():
+#         heappush(max_heap, (-val, key))
+#
+#     return [heappop(max_heap)[1] for _ in range(k)]
