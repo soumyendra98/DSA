@@ -41,3 +41,31 @@ def findOrder(numCourses: int, prerequisites: List[List[int]]) -> List[int]:
             return []
 
     return list(completed.keys())
+
+
+# Khan's Algorithm For Topological Sorting
+# def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+#     output = []
+#     graph = defaultdict(set)
+#     in_degree = defaultdict(int)
+#
+#     for a, b in prerequisites:
+#         graph[b].add(a)
+#         in_degree[a] += 1
+#
+#     queue = deque([i for i in range(numCourses) if i not in in_degree])
+#     count = 0
+#     print(queue)
+#     while queue:
+#         node = queue.popleft()
+#         output.append(node)
+#
+#         for next_node in graph[node]:
+#             in_degree[next_node] -= 1
+#             if in_degree[next_node] == 0:
+#                 queue.append(next_node)
+#
+#         count += 1
+#     if count != numCourses:
+#         return []
+#     return output

@@ -19,7 +19,7 @@ class UF:
         if rx != ry:
             if self.rank[rx] < self.rank[ry]:
                 self.uf[rx] = ry
-                self.rank[ry] += self.rank[ry]
+                self.rank[ry] += self.rank[rx]
             else:
                 self.uf[ry] = rx
                 self.rank[rx] += self.rank[ry]
