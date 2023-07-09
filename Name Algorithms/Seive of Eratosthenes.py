@@ -25,3 +25,17 @@ def isPrime(n):
         if n % x == 0:
             return False
     return True
+
+
+ def primeSieve(n):
+    ps = [True] * (n + 1)
+    ps[0] = ps[1] = False
+
+    p = 2
+    while p * p <= n:
+        if ps[p]:
+            for i in range(p * p, n + 1, p):
+                ps[i] = False
+        p += 1
+    3
+    return ps
